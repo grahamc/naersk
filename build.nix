@@ -600,6 +600,6 @@ let
         done
         ${postBuild}
       '';
-  drv = stdenv.mkDerivation (drvAttrs // userAttrs);
+  drv = pkgs.swiftPackages.stdenv.mkDerivation (drvAttrs // userAttrs);
 in
 drv.overrideAttrs override
